@@ -24,7 +24,7 @@ jobs:
 
     - name: Stop JAR on GCP Compute Engine if running
       run: |
-        gcloud compute ssh --zone=asia-south1-c qwiklabs-gcp-01-d2b0ef9b92a8 --command="if pgrep -f SpringProject-0.0.1-SNAPSHOT.jar > /dev/null; then sudo pkill -f SpringProject-0.0.1-SNAPSHOT.jar; else echo 'No process found'; fi"
+        gcloud compute ssh --zone=asia-south1-c student-02-607b21804762@demo-123 --command="if pgrep -f SpringProject-0.0.1-SNAPSHOT.jar > /dev/null; then sudo pkill -f SpringProject-0.0.1-SNAPSHOT.jar; else echo 'No process found'; fi"
         
     - name: Copy JAR to GCP Compute Engine
       run: |
